@@ -9,12 +9,12 @@
 		<div class="container">
 
 			<div class="main-logo">
-				<img src="img/logo-main.png" alt="Gllacy" width="170" height="50">
+				<a href="index.html"><img src="img/logo-main.png" alt="Gllacy" width="170" height="50"></a>
 			</div>
 
 			<nav class="main-menu">
 				<ul>
-					<li class="active"><a href="#">Каталог</a></li>
+					<li><a href="#" class="active">Каталог</a></li>
 					<li><a href="#">Доставка и оплата</a></li>
 					<li><a href="#">О компании</a></li>
 				</ul>
@@ -22,13 +22,13 @@
 
 			<div class="user-block">
 				<a href="#" class="search">Поиск</a>
-				<a href="#" class="log-in">Вход</a>
-				<a href="#" class="basket">Пусто</a>
+				<a href="#" class="login">Вход</a>
+				<a href="#" class="card">Пусто</a>
 			</div>
 
 			<div class="contacts">
-				<i>С 10 до 20, ежедневно</i>
-				<b>8 812 450-25-25</b>
+				<span>С 10 до 20, ежедневно</span>
+				<span>8 812 450-25-25</span>
 			</div>
 		</div>
 	</header>
@@ -49,40 +49,42 @@
 			<form action="/" method="get" name="filter">
 
 				<fieldset>
+					<legend>Сортировка</legend>
+					<select name="sort">
+						<option value="1">По популярности</option>
+						<option value="2">По цене</option>
+						<option value="3">По алфавиту</option>
+					</select>
+				</fieldset>
 
-				<h3>Сортировка</h3>
-				<select name="sort">
-					<option value="1">По популярности</option>
-					<option value="2">По цене</option>
-					<option value="3">По алфавиту</option>
-				</select>
+				<fieldset>
+					<legend>Цена: 100 руб. - 500 руб.</legend>
+					<div class="price-range"></div>
+				</fieldset>
 
-				<h3>Цена: 100 руб. - 500 руб.</h3>
-				<div class="price-range"></div>
-
-				<h3>Жирность</h3>
-				<label>
-					<input type="radio" name="fat" value="1">	
-					0%
-				</label>
-				<label>
-					<input type="radio" name="fat" value="2" checked>
-					до 10%
-				</label>
-				<label>
-					<input type="radio" name="fat" value="3">
-					до 30%
-				</label>
-				<label>
-					<input type="radio" name="fat" value="4">
-					свыше 30%
-				</label>
-					
+				<fieldset>
+					<legend>Жирность</legend>
+					<label>
+						<input type="radio" name="fat" value="1">	
+						0%
+					</label>
+					<label>
+						<input type="radio" name="fat" value="2" checked>
+						до 10%
+					</label>
+					<label>
+						<input type="radio" name="fat" value="3">
+						до 30%
+					</label>
+					<label>
+						<input type="radio" name="fat" value="4">
+						свыше 30%
+					</label>
 				</fieldset>
 
 				<fieldset>
 
-					<h3>Наполнители</h3>
+					<legend>Наполнители</legend>
 					
 					<label>
 						<input type="checkbox" name="toping" value="1" checked>
@@ -109,9 +111,9 @@
 						Джемы
 					</label>
 
-					<button class="btn btn_transparent">Применить</button>
-
 				</fieldset>
+				
+				<button class="btn btn_transparent">Применить</button>
 
 			</form>
 		</section>
